@@ -35,10 +35,40 @@ img {
   border-radius: 50%;
 }
 
-main {
+body {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   padding: 4rem 2rem;
   background: #F2F2F2;
+}
+
+body::before {
+  content: "";
+  height: 150vh;
+  width: 100%;
+  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  position: absolute;
+  top: -75vh;
+  left: -50%;
+  border-bottom-right-radius: 50vw;
+}
+
+body::after {
+  content: "";
+  height: 75vh;
+  width: 100%;
+  background: linear-gradient(225deg, #E844FF 0%, #8739FF 100%);
+  opacity: 0.03;
+  position: absolute;
+  bottom: 0;
+  right: -50%;
+  border-top-left-radius: 50vw;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 .phone {
@@ -253,5 +283,22 @@ main {
   height: 25px;
   color: white;
   font-size: .8rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  line-height: 1.175;
+  color: #3E2753;
+  margin-bottom: 1.5rem;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #A39DA9;
 }
 /*# sourceMappingURL=style.css.map */
